@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* COLOUR PALLATE */
+:root{
+    --bgBLACK:#1F1C1C;
+    --white-txt:white;
+    --green:#71FB00;
+}
+/*end color*/
+
+.nav-container{
+    width:100%;
+    height:100px;
+    background-color:var(--bgBLACK);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 30px;
+    color:var(--white-txt);
+
+}
+.nav-left{
+    font-size:1.5rem;
+    font-family:'Inter',serif;
+    color:var(--green);
+}
+/* --------  Nav Center -------*/
+.nav-center .navbar{
+    list-style:none;
+    width:550px;
+    display:flex;
+    gap:75px;
+    flex-wrap:wrap;
+    font-size:1.3rem;
+    cursor:pointer;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:var(--white-txt);
+    position: relative;
+}
+/* sliding effect  of navbar */
+
+.navbar a::after{
+    margin:-2px 0;
+    content:'';
+    position:absolute;
+    width:0;
+    height:3px;
+    background-color:var(--green);
+    bottom:-4px;
+    left:0;
+    color:blue;
+    transition:width 0.4s ease-in-out;
+}
+.navbar a:hover::after{
+    width:100%;
+}
+
+.nav-right .dw-cv-btn{
+    background-color:transparent;
+    width:129px;
+    height:42px;
+    border:2px solid var(--green);
+    color:var(--white-txt);
+    border-radius:6px;
+}
+.dw-cv-btn:hover{
+    background-color:var(--green);
+    color:black;
+}
+
+/*--------- Right Menu bar -----------*/
+
+
+
+/* --------- Menu buttons --------*/
+
+.m-item a{
+    text-decoration:none;
+    color:var(--green);
+}
+
+
+
+.nav-right .menu-btn{
+    display:none;
+    background-color:transparent;
+    border:none;
+    cursor: pointer;
+}
+.menu-btn svg{
+    width:40px;
+    height:45px;
+}
+/*----------Responsive Area ----------------- */
+
+@media (max-width: 850px) {
+    .nav-container{
+        width:100%;
+        height:80px;
+        border-bottom:1px solid grey;
+    }
+    .nav-left{
+        font-size:20px;
+    }
+
+    .nav-center{
+        display:none;
+    }
+
+    .nav-right .dw-cv-btn{
+        background-color:transparent;
+        width:99px;
+        height:37px;
+        font-size:12px;
+        
+    }
+    .dw-cv-btn:hover{
+        background-color:var(--green);
+        color:black;
+    }
+  }
+  
+
