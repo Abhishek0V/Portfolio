@@ -1,6 +1,5 @@
 import React from 'react'
 import '../CSS/Home.css'
-import bgimg from '../assets/bg.png';
 
 const Home = () => {
     return (
@@ -15,6 +14,7 @@ const Home = () => {
                     Hello , My name is Abhishek V  . Nice to meet you  I would like to welcome you you with  my personal portfolio
                     </div>
                 </div>
+                
             </div>
         </div>
     )

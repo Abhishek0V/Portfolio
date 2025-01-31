@@ -13,28 +13,28 @@
 }
 
 .home-container {
-    background-color:var(--bgBLACK);
-    background-position:center;
-    background-size:cover;
+    background-color: var(--bgBLACK);
+    background-position: center;
+    background-size: cover;
     color: white;
-    height: 100vh;
+    height:100vh;
     width: 100%;
 
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
 }
 
 .home-container .info {
-    background-color:rgba(255, 0, 0, 0.008);
+    background-color: rgba(255, 0, 0, 0.008);
     width: 70%;
     height: 80vh;
 
     margin: 0 auto;
     position: relative;
     top: 90px;
-    padding:30px 10px;
+    padding: 30px 10px;
 
     display: flex;
     justify-content: space-between;
@@ -45,11 +45,13 @@
     /* border:2px solid red; */
 
 }
-.sticker img{
-    width:500px;
-    height:500px;
-    opacity:0.6;
+
+.sticker img {
+    width: 500px;
+    height: 500px;
+    opacity: 0.6;
 }
+
 .info .Main-info {
     height: 40vh;
     width: 700px;
@@ -89,37 +91,136 @@
 }
 
 .info .second-info {
-    width:785px;
-    text-align:left;
-    font-size:20px;
+    width: 785px;
+    text-align: left;
+    font-size: 20px;
     font-family: "Jaldi", serif;
     font-weight: 400;
     font-style: normal;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     /* border:2px solid red; */
 
-    position:absolute;
-    left:0;
-    bottom:40px;
 }
 
 
 /* ---------------------Responsive Area --------------------------------*/
-@media (max-width: 850px) {
+
+@media (max-width: 1024px) {
+    .home-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
     .home-container .info {
-        top: 50px;
-        height: 60vh;
-        background-color: transparent;
-        width: 90%;
-        top: 110px;
+        width: 85%;
+        height: auto;
+        margin: 20px 0;
     }
 
     .info .Main-info {
-        font-size: 65px;
-        overflow: hidden;
+        width: 100%;
+        font-size: 60px;
+    }
+
+    .Main-info .item-main {
+        font-size: 100px;
+        margin: 0 20px;
+    }
+
+    .Main-info .role {
+        font-size: 30px;
+        margin-top: 10px;
     }
 
     .info .second-info {
-        text-align: left;
+        font-size: 16px;
+        width: 100%;
+        bottom: 20px;
     }
+
+    .sticker img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .home-container {
+        height: 70vh;
+    }
+
+    .home-container .info {
+        top: 0;
+        padding: 20px;
+    }
+
+    .info .Main-info {
+        font-size: 70px;
+    }
+
+    .Main-info .item-main {
+        font-size: 70px;
+        margin: 10px 0;
+    }
+
+    .Main-info .role {
+        font-size: 25px;
+    }
+
+    .info .second-info {
+        font-size: 14px;
+    }
+
+    .sticker img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .home-container {
+        height: 70vh;
+    }
+
+    .home-container .info {
+        background-color: transparent;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .info .Main-info {
+        height: 60%;
+        font-size: 50px;
+        background-color: transparent;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .Main-info .item-main {
+        font-size: 60px;
+    }
+
+    .Main-info .role {
+        font-size: 30px;
+        margin: -20px auto;
+    }
+
+    .info .second-info {
+        font-size: 16px;
+    }
+
+    .green-line {
+        height: 10vh;
+        background-color: var(--dark-green);
+    }
+
+
+
 }
