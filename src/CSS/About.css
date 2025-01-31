@@ -59,7 +59,7 @@
 
 .subinfo-container .sub-title {
     /* background-color: indianred; */
-    color:red;
+    color:var(--green);
 
     width: 57%;
     min-height: 12vh;
